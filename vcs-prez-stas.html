@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Version control</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vcs-prez-stas_files\rmdshower/node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="vcs-prez-stas_files/rmdshower/package/styles/screen-16x10.css">
+  <link rel="stylesheet" href="vcs-prez-stas_files\rmdshower/style-common.css">
+  <link rel="stylesheet" href="vcs-prez-stas_files\rmdshower/style-ribbon.css">
+  <link rel="stylesheet" href="vcs-prez-stas_files/rmdshower/style-override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="vcs-prez-stas_files\rmdshower/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Version control</h1>
+    <p>Stas Kolenikov</p>
+  </header>
+
+    
+  
+<section id="version-control" class="slide level2">
+<h2>Version control</h2>
+<p>Wikipedia <a href="https://en.wikipedia.org/wiki/Version_control">defines</a> version control as</p>
+<blockquote>
+<p>management of changes to documents, computer programs, large web sites, and other collections of information.</p>
+</blockquote>
+<p>To put it differently, this is a way to retain semblance of sanity when the inputs and the code keeps changing.</p>
+</section>
+<section id="concepts" class="slide level2">
+<h2>Concepts</h2>
+<p>The major concepts concerning version control are:</p>
+<ol type="1">
+<li>Repository</li>
+<li>Changeset</li>
+<li>Commits</li>
+<li>Distributed VCS: push/pull/merge</li>
+</ol>
+</section>
+<section id="repository" class="slide level2">
+<h2>Repository</h2>
+<p>It is easiest to think about repositories as projets. It is best to keep 1:1 relations between them, although you can try more complicated relations with several code repositories within a project, or, worse, a single repository serving different projects.</p>
+<p>A repository is a collection of:</p>
+<ul>
+<li>files that you are working on, such as code or input data</li>
+<li>metadata about these files, namely the record of changes</li>
+</ul>
+</section>
+<section id="stas-ongoing-example-ipfraking-repo" class="slide level2">
+<h2>Stas’ ongoing example: <code>ipfraking</code> repo</h2>
+<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking</a></p>
+</section>
+<section id="changeset" class="slide level2">
+<h2>Changeset</h2>
+<p>A changeset is a record in the repository of the changes that were made to its state.</p>
+<p>Each changeset is assigned a random hex string, usually of at least a dozen characters, if not two dozen, to uniquely identify it.</p>
+</section>
+<section id="commits" class="slide level2">
+<h2>Commits</h2>
+<p>Once the code developer decides they have made a reasonable number of changes,</p>
+<p>Commit is the action of adding a changeset to the repository.</p>
+<p>In every VCS, a commit message is required to accompany the commit and describe what this commit/changeset achieves.</p>
+</section>
+<section id="scope" class="slide level2">
+<h2>Scope</h2>
+<p>What’s an appropriate scope for a changeset? Well, ideally, whatever you can describe in one sentence that would be visible when you view your repo!</p>
+<blockquote>
+<p>A matching bracket is fixed in <code>load_data.py</code></p>
+</blockquote>
+<p>or can be</p>
+<blockquote>
+<p>Web scraping code is added</p>
+</blockquote>
+<p>which could add 25 files to the repo – but this would still be a good changeset with a specific purpose.</p>
+</section>
+<section id="stas-ongoing-example-a-random-changeset-in-ipfraking" class="slide level2">
+<h2>Stas’ ongoing example: a random changeset in <code>ipfraking</code></h2>
+<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking/commits/e069eb8cded6d3454efab9adcb60e4c415cd7ba1" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking/commits/e069eb8cded6d3454efab9adcb60e4c415cd7ba1</a></p>
+<p>Go back to the list of commits to see how the commit message is displayed</p>
+<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking/commits/all" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking/commits/all</a></p>
+</section>
+<section id="branches" class="slide level2">
+<h2>Branches</h2>
+<p>Distributed VCSs allow different users/developers to work on their part of the project independently. E.g., one team could work on the engine, another on inputs in the user interface, and yet another on the outputs. In analytic projects, some people may be working on data acquisition and cleaning, while others could prepare analysis templates and narratives (in markdown).</p>
+</section>
+<section id="pushpull" class="slide level2">
+<h2>Push/pull</h2>
+<p>Each user can work on their own copy of the repository, making commits to that copy. However, periodically (EOB? end of the week?) everybody need to synchronize their state of the project to make sure that the different pieces really work together. To that effect, distrbiuted VCS have two specific actions: <em>push</em> and <em>pull</em>.</p>
+</section>
+<section id="pushpull-1" class="slide level2">
+<h2>Push/pull</h2>
+<ul>
+<li><em>push</em> is the action of uploading your local commits (all of them) to the centralized, master copy of the repository (typically, a repository on GitHub.com, BitBucket.org, Kiln on FogCreek, etc.)</li>
+<li><em>pull</em> is the action of downloading the commits from the master repository to your own local copy</li>
+</ul>
+<p>TODO: insert a cute picture of a branched repo.</p>
+</section>
+<section id="merge" class="slide level2">
+<h2>Merge</h2>
+<p>As you can clearly imagine, push/pull operation can easily create conflicts. What if two or more different people made changes between their respective pushes to the master repository? What should the resulting state be after all developers push their code?</p>
+<p>The issue is known as <em>merge</em>. Sometimes, merges are clean – i.e., when different people worked on different files, or each file was worked on by one person at a time.</p>
+</section>
+<section id="merge-1" class="slide level2">
+<h2>Merge</h2>
+<p>Other times, merges require intervention of a knowledgeable human to determine how the conflicts are to be resolved. Typically, VCS clients (see below) offer meaningful options, e.g., by taking the union of the changes. But sometimes, manual editing may be required when e.g. different developers worked on the same file.</p>
+<p>TODO: insert a cute picture of a branched repo with merges.</p>
+</section>
+<section id="example-of-a-merge-in-ipfraking-repo" class="slide level2">
+<h2>Example of a merge in <code>ipfraking</code> repo</h2>
+<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking/commits/6a43bf36b4b84f03a25da20ac1e477e8433df437" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking/commits/6a43bf36b4b84f03a25da20ac1e477e8433df437</a></p>
+</section>
+<section id="issue-tracking" class="slide level2">
+<h2>Issue tracking</h2>
+<p>While not necessarily a part of a version control system, <em>issue trackers</em> are a useful addition to them. When you see an email from your IT support titled like “<em>Ticket #1054347: Excel does not open on my computer</em>”, it is generated by the issue tracking system that your IT uses.</p>
+<ul>
+<li>a bug (most typical in software development)</li>
+<li>a task (e.g., consolidating or refactoring the code)</li>
+<li>an enhancement or a feature request</li>
+</ul>
+</section>
+<section id="analysis-plan-in-issue-trackers" class="slide level2">
+<h2>Analysis plan in issue trackers</h2>
+<p>In the world of data analytic projects, an analysis plan can be converted to a series of “issues”, with subsequent development of the code addressing, and closing, these issues.</p>
+</section>
+<section id="issue-trackers-and-commit-messages" class="slide level2">
+<h2>Issue trackers and commit messages</h2>
+<p>A neat way to bring together the concepts of commits and issues is through markup of commit messages. Typically, the following conventions are understood by the different VCS:</p>
+<ul>
+<li>a hash sign # denotes an issue</li>
+<li>a hex string denotes a changeset</li>
+<li>text like “<em>fixed</em>” or “<em>resolved</em>”</li>
+</ul>
+</section>
+<section id="there-i-fixed-it-for-you" class="slide level2">
+<h2>There, I fixed it for you</h2>
+<p>Most modern VCS would be able to parse the message</p>
+<blockquote>
+<p>Commit 45ef0da2c fixes issue # 237: input file is not updated in code/refresh_plot.py</p>
+</blockquote>
+<p>and identify all three components: the changeset, the issue, and the file. Moreover, the issue will get closed/resolved automatically with such a commit message.</p>
+</section>
+<section id="vcs-wars" class="slide level2">
+<h2>VCS wars</h2>
+<p>There are three major version control systems:</p>
+<ol type="1">
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://www.mercurial-scm.org/">Mercurial/Hg</a></li>
+<li>Apache <a href="https://subversion.apache.org/">Subversion/SVN</a></li>
+</ol>
+<p>They share the common functionality, and while the differences are mostly in esoteric issues, these differences divide the developers into intensely loyal camps.</p>
+</section>
+<section id="client-wars" class="slide level2">
+<h2>Client wars</h2>
+<p>But there is more. While version control <em>engines</em> run from command line, there are also neat GUIs, or clients, to visualize the processes — and they cause wars, too.</p>
+<ol type="1">
+<li>Atlassian <a href="https://www.sourcetreeapp.com/">SourceTree</a> – supports both Git and Mercurial</li>
+<li><a href="https://tortoisehg.bitbucket.io/">TortoiseHg</a> – Mercurial only</li>
+<li><a href="https://www.gitkraken.com/">GitKraken</a> – Git only</li>
+</ol>
+<p>and many others. They obviously differ somewhat in what they can do, and which of the more complex functions are supported.</p>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="vcs-prez-stas_files\rmdshower/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>
