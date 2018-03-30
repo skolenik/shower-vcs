@@ -306,7 +306,7 @@ to do something about them"
 
 ## Merge conflict
 
-RStudio client produces the following kind of a rant on the topic:
+GitHub produces the following kind of a rant on the topic:
 
 > hint: Updates were rejected because the remote contains work that you do
 > not have locally. This is usually caused by another repository pushing
@@ -314,3 +314,63 @@ RStudio client produces the following kind of a rant on the topic:
 > (e.g., 'git pull ...') before pushing again.
 > See the 'Note about fast-forwards' in 'git push --help' for details.
 
+It really makes things more complicated than they need be.
+
+## Exercise 8d: pull
+
+Let us try to resolve the issue by working in the local repository.
+*Pull* the changes that happened elsewhere.
+Your client should have the pull button somewhere prominently, and it will likely
+have a downward pointing arrow. You may be asked for the username and password again.
+
+After the pull, you should get the updated `README.md` file. That's where the change was, remember?
+
+## Exercise 8e: merge
+
+Identify the *merge* control in your client. It will say "`Merge`", and it will likely have 
+arrows or lines merging. When you click it, you will see a moderately complex screen showing
+what the changes have been in the different branches of the project. At the moment, we have a nice,
+clean merge, with the remote changes confined to `README.md`, and everything else happening locally
+with the files that you worked with. Hit "`OK`" or whatever is needed to finalize the operation.
+You may or may not have a chance to enter a commit message -- it will likely be an automated
+"Merge", anyway.
+
+## Exercise 8f: push again
+
+Now that the local repo does not have any conflicts, you can push the neatly merged
+set of changesets back to the server. Hit the "Push" button, and notice that your client
+will likely say that it is preparing and pushing several changesets. Go back to the server
+and validate that all of the changes have propagated.
+
+## That's it folks
+
+Please review that you did today. Look again at the changes in the client
+and on the server (<font color="red">red</font> to show the text taken out; 
+<font color="green">green</font> to show the text that was added.)
+
+This probably covers 80% of what you will be doing, in terms of version control.
+
+## Other VCS operations
+
+- Revert files to a given revision level
+- Create additional branches 
+- Ignore files (e.g., input data sets that are just too big)
+
+## Other GitHub operations
+
+- Fork a repo
+- Create a pull request
+
+## Issue tracking
+
+Different clients differ in their support of issues.
+Typically, though, you can manage issues on the server.
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring 
+HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+
+This presentation is delivered by [shower](https://github.com/shower/shower) HTML presentation engine.
+
+The GitHub repo where this presentation lives is https://github.com/skolenik/shower-vcs.

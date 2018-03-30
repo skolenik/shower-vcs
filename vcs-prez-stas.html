@@ -189,6 +189,9 @@
 <section id="exercise-2-clone-a-repo" class="slide level2">
 <h2>Exercise 2: clone a repo</h2>
 <p>The next step is to create the infrastructure for your project locally. This is the <em>clone</em> operation. Find out using your client how this is done. Since this is always the first step in the client, it would be conceptually similar to <code>File/Open</code>, so you should expect to find the relevant buttons/controls somewhere in the upper left corner of the client’s GUI.</p>
+</section>
+<section id="exercise-2-clone-a-repo-1" class="slide level2">
+<h2>Exercise 2: clone a repo</h2>
 <p>In RStudio, you can clone a GitHub repo with <code>File/New Project/Version Control/Git</code>.</p>
 <p>Point your client to an empty folder. If you have some code that you are itching to put under version control, we will copy it down at the next step.</p>
 </section>
@@ -225,19 +228,73 @@
 <h2>Exercise 8: create a conflict!</h2>
 <p>This will be a common situation with your repos, so the earlier you learn to deal with it, the better. We will create conflicting commits in different branches of the project, and try to figure out how to deal with them.</p>
 </section>
-<section id="exercise-8a-changes-on-the-server" class="slide level2">
-<h2>Exercise 8a: changes on the server</h2>
+<section id="exercise-8a-make-changes-on-the-server" class="slide level2">
+<h2>Exercise 8a: make changes on the server</h2>
 <p>Click on <code>README.md</code> file in your repo to edit it. It will probably look like this:</p>
 <pre><code># sandbox
 Some description</code></pre>
 <p>Change the description to “This is my sandbox to play with version control.” Note that you actually have a “Commit” button rather than “Save” button; whatever you edit online gets committed immediately.</p>
 </section>
+<section id="exercise-8b-make-local-changes" class="slide level2">
+<h2>Exercise 8b: make local changes</h2>
+<p>Go back to your local version of the repository and make local changes - add more files from elsewhere - add another line of “Hello world again!” to your basic file</p>
+<p>Commit the changes – you know how to do that</p>
+</section>
+<section id="exercise-8c-conflict-revealed" class="slide level2">
+<h2>Exercise 8c: conflict revealed!</h2>
+<p>Try pushing the local changes up the server.</p>
+<p>You should get an error message that will probably be cryptic, but it should convey something like “You tried pushing things to the server, but there were some changes there that are not compatible with yours. You need to do something about them”</p>
+</section>
 <section id="merge-conflict" class="slide level2">
 <h2>Merge conflict</h2>
-<p>GitHub produces a rather long rant on the topic:</p>
+<p>GitHub produces the following kind of a rant on the topic:</p>
 <blockquote>
-<p>hint: Updates were rejected because the remote contains work that you do hint: not have locally. This is usually caused by another repository pushing hint: to the same ref. You may want to first integrate the remote changes hint: (e.g., ‘git pull …’) before pushing again. hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
+<p>hint: Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes (e.g., ‘git pull …’) before pushing again. See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
 </blockquote>
+<p>It really makes things more complicated than they need be.</p>
+</section>
+<section id="exercise-8d-pull" class="slide level2">
+<h2>Exercise 8d: pull</h2>
+<p>Let us try to resolve the issue by working in the local repository. <em>Pull</em> the changes that happened elsewhere. Your client should have the pull button somewhere prominently, and it will likely have a downward pointing arrow. You may be asked for the username and password again.</p>
+<p>After the pull, you should get the updated <code>README.md</code> file. That’s where the change was, remember?</p>
+</section>
+<section id="exercise-8e-merge" class="slide level2">
+<h2>Exercise 8e: merge</h2>
+<p>Identify the <em>merge</em> control in your client. It will say “<code>Merge</code>”, and it will likely have arrows or lines merging. When you click it, you will see a moderately complex screen showing what the changes have been in the different branches of the project. At the moment, we have a nice, clean merge, with the remote changes confined to <code>README.md</code>, and everything else happening locally with the files that you worked with. Hit “<code>OK</code>” or whatever is needed to finalize the operation. You may or may not have a chance to enter a commit message – it will likely be an automated “Merge”, anyway.</p>
+</section>
+<section id="exercise-8f-push-again" class="slide level2">
+<h2>Exercise 8f: push again</h2>
+<p>Now that the local repo does not have any conflicts, you can push the neatly merged set of changesets back to the server. Hit the “Push” button, and notice that your client will likely say that it is preparing and pushing several changesets. Go back to the server and validate that all of the changes have propagated.</p>
+</section>
+<section id="thats-it-folks" class="slide level2">
+<h2>That’s it folks</h2>
+<p>Please review that you did today. Look again at the changes in the client and on the server (<font color="red">red</font> to show the text taken out; <font color="green">green</font> to show the text that was added.)</p>
+<p>This probably covers 80% of what you will be doing, in terms of version control.</p>
+</section>
+<section id="other-vcs-operations" class="slide level2">
+<h2>Other VCS operations</h2>
+<ul>
+<li>Revert files to a given revision level</li>
+<li>Create additional branches</li>
+<li>Ignore files (e.g., input data sets that are just too big)</li>
+</ul>
+</section>
+<section id="other-github-operations" class="slide level2">
+<h2>Other GitHub operations</h2>
+<ul>
+<li>Fork a repo</li>
+<li>Create a pull request</li>
+</ul>
+</section>
+<section id="issue-tracking-1" class="slide level2">
+<h2>Issue tracking</h2>
+<p>Different clients differ in their support of issues. Typically, though, you can manage issues on the server.</p>
+</section>
+<section id="r-markdown" class="slide level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>This presentation is delivered by <a href="https://github.com/shower/shower">shower</a> HTML presentation engine.</p>
+<p>The GitHub repo where this presentation lives is <a href="https://github.com/skolenik/shower-vcs" class="uri">https://github.com/skolenik/shower-vcs</a>.</p>
 </section>
 
   <!--
