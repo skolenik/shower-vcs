@@ -205,5 +205,112 @@ Prerequisites:
 
 For a number of reasons, a better workflow is to create a repository online first,
 and then fold it into your local work. So, create a repository (let's name it `sandbox`)
-on GitHub or BitBucket, depending on where you have an account.
+on [GitHub](https://github.com) or [BitBucket](https://bitbucket.org), 
+depending on where you have an account. You can use the default settings...
+we will delete this repository anyway. Please make sure that `README.md` file gets 
+created, though.
+
+## Exercise 2: clone a repo
+
+The next step is to create the infrastructure for your project locally.
+This is the *clone* operation. Find out using your client how this is done.
+Since this is always the first step in the client, 
+it would be conceptually similar to `File/Open`, so you should expect
+to find the relevant buttons/controls somewhere in the upper left corner of
+the client's GUI.
+
+## Exercise 2: clone a repo
+
+In RStudio, you can clone a GitHub repo with `File/New Project/Version Control/Git`.
+
+Point your client to an empty folder. If you have some code that you are
+itching to put under version control, we will copy it down at the next step.
+
+## Exercise 3: make local changes
+
+- Copy some existing code (do not delete your actual work though!)
+
+or 
+
+- Create some sort of "*Hello, world*" file.
+
+## Exercise 4: find how the client identifies changes
+
+Go back to your client. (In TortoiseHg, you need to hit "Refresh" button.)
+Most likely, you will be shown some sort of a display of your folder,
+with the files that you created or copied. You will most likely see 
+question marks (intended to indicate
+that your client does not yet know whether you want to add that file to the repo).
+Clicking on the files, you will see some content.
+
+TODO: screenshots of SourceTree, TortoiseHg, GitKraken
+
+## Exercise 5: commit the changes
+
+Select the files with the question marks that you want to be added to the project
+(maybe all of them if there are more than one). (Git has an intermediate concept of *staging*;
+your Git client will have a separate area with the files in the directory, and the "stage" area,
+and will have a "Stage" button and probably "Stage All" button, too.)
+
+Write a commit message -- this can be something optimistic like "My first commit ever!"
+
+## Exercise 6: push the chages
+
+The next step would be to push the changes to the server. 
+- You can reasonably expect the relevant button to show an arrow going up.
+- You will be asked for your GitHub/BitBucket username and password. Enter them.
+
+## Exercise 7: view from the other side
+
+Go back to your repo online on GitHub/BitBucket, and reload it. Observe where the changes
+are, and how the server shows them.
+
+Identify the hex ID of the changeset in both the client and on the server. 
+You don't need it know, but you need to know where to look for one.
+
+## Exercise 8: create a conflict!
+
+This will be a common situation with your repos, so the earlier you learn to deal with it,
+the better. We will create conflicting commits in different branches of the project,
+and try to figure out how to deal with them.
+
+## Exercise 8a: make changes on the server
+
+Click on `README.md` file in your repo to edit it. It will probably look like this:
+
+```
+# sandbox
+Some description
+```
+
+Change the description to "This is my sandbox to play with version control."
+Note that you actually have a "Commit" button rather than "Save"  button; whatever you edit online
+gets committed immediately.
+
+## Exercise 8b: make local changes
+
+Go back to your local version of the repository and make local changes
+- add more files from elsewhere
+- add another line of "Hello world again!" to your basic file
+
+Commit the changes -- you know how to do that
+
+## Exercise 8c: conflict revealed!
+
+Try pushing the local changes up the server. 
+
+You should get an error message that will probably be cryptic,
+but it should convey something like "You tried pushing things to the server,
+but there were some changes there that are not compatible with yours. You need
+to do something about them"
+
+## Merge conflict
+
+RStudio client produces the following kind of a rant on the topic:
+
+> hint: Updates were rejected because the remote contains work that you do
+> not have locally. This is usually caused by another repository pushing
+> to the same ref. You may want to first integrate the remote changes
+> (e.g., 'git pull ...') before pushing again.
+> See the 'Note about fast-forwards' in 'git push --help' for details.
 

@@ -184,7 +184,60 @@
 </section>
 <section id="exercise-1-create-a-repo" class="slide level2">
 <h2>Exercise 1: create a repo</h2>
-<p>For a number of reasons, a better workflow is to create a repository online first, and then fold it into your local work. So, create a repository (let’s name it <code>sandbox</code>) on GitHub or BitBucket, depending on where you have an account.</p>
+<p>For a number of reasons, a better workflow is to create a repository online first, and then fold it into your local work. So, create a repository (let’s name it <code>sandbox</code>) on <a href="https://github.com">GitHub</a> or <a href="https://bitbucket.org">BitBucket</a>, depending on where you have an account. You can use the default settings… we will delete this repository anyway. Please make sure that <code>README.md</code> file gets created, though.</p>
+</section>
+<section id="exercise-2-clone-a-repo" class="slide level2">
+<h2>Exercise 2: clone a repo</h2>
+<p>The next step is to create the infrastructure for your project locally. This is the <em>clone</em> operation. Find out using your client how this is done. Since this is always the first step in the client, it would be conceptually similar to <code>File/Open</code>, so you should expect to find the relevant buttons/controls somewhere in the upper left corner of the client’s GUI.</p>
+<p>In RStudio, you can clone a GitHub repo with <code>File/New Project/Version Control/Git</code>.</p>
+<p>Point your client to an empty folder. If you have some code that you are itching to put under version control, we will copy it down at the next step.</p>
+</section>
+<section id="exercise-3-make-local-changes" class="slide level2">
+<h2>Exercise 3: make local changes</h2>
+<ul>
+<li>Copy some existing code (do not delete your actual work though!)</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Create some sort of “<em>Hello, world</em>” file.</li>
+</ul>
+</section>
+<section id="exercise-4-find-how-the-client-identifies-changes" class="slide level2">
+<h2>Exercise 4: find how the client identifies changes</h2>
+<p>Go back to your client. (In TortoiseHg, you need to hit “Refresh” button.) Most likely, you will be shown some sort of a display of your folder, with the files that you created or copied. You will most likely see question marks (intended to indicate that your client does not yet know whether you want to add that file to the repo). Clicking on the files, you will see some content.</p>
+<p>TODO: screenshots of SourceTree, TortoiseHg, GitKraken</p>
+</section>
+<section id="exercise-5-commit-the-changes" class="slide level2">
+<h2>Exercise 5: commit the changes</h2>
+<p>Select the files with the question marks that you want to be added to the project (maybe all of them if there are more than one). (Git has an intermediate concept of <em>staging</em>; your Git client will have a separate area with the files in the directory, and the “stage” area, and will have a “Stage” button and probably “Stage All” button, too.)</p>
+<p>Write a commit message – this can be something optimistic like “My first commit ever!”</p>
+</section>
+<section id="exercise-6-push-the-chages" class="slide level2">
+<h2>Exercise 6: push the chages</h2>
+<p>The next step would be to push the changes to the server. - You can reasonably expect the relevant button to show an arrow going up. - You will be asked for your GitHub/BitBucket username and password. Enter them.</p>
+</section>
+<section id="exercise-7-view-from-the-other-side" class="slide level2">
+<h2>Exercise 7: view from the other side</h2>
+<p>Go back to your repo online on GitHub/BitBucket, and reload it. Observe where the changes are, and how the server shows them.</p>
+<p>Identify the hex ID of the changeset in both the client and on the server. You don’t need it know, but you need to know where to look for one.</p>
+</section>
+<section id="exercise-8-create-a-conflict" class="slide level2">
+<h2>Exercise 8: create a conflict!</h2>
+<p>This will be a common situation with your repos, so the earlier you learn to deal with it, the better. We will create conflicting commits in different branches of the project, and try to figure out how to deal with them.</p>
+</section>
+<section id="exercise-8a-changes-on-the-server" class="slide level2">
+<h2>Exercise 8a: changes on the server</h2>
+<p>Click on <code>README.md</code> file in your repo to edit it. It will probably look like this:</p>
+<pre><code># sandbox
+Some description</code></pre>
+<p>Change the description to “This is my sandbox to play with version control.” Note that you actually have a “Commit” button rather than “Save” button; whatever you edit online gets committed immediately.</p>
+</section>
+<section id="merge-conflict" class="slide level2">
+<h2>Merge conflict</h2>
+<p>GitHub produces a rather long rant on the topic:</p>
+<blockquote>
+<p>hint: Updates were rejected because the remote contains work that you do hint: not have locally. This is usually caused by another repository pushing hint: to the same ref. You may want to first integrate the remote changes hint: (e.g., ‘git pull …’) before pushing again. hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
+</blockquote>
 </section>
 
   <!--
