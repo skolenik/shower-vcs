@@ -190,3 +190,20 @@ GUIs, or clients, to visualize the processes --- and they cause wars, too.
 and many others. They obviously differ somewhat in what they can do, and which of the more
 complex functions are supported.
 
+## Time to play!
+
+Enough said! Let's go break some things!
+
+Prerequisites:
+
+- an account on https://github.com or https://bitbucket.org
+- a VCS client -- any one mentioned on the previous slide
+  * RStudio has a built-in Git client, too
+- desire to learn!
+
+## Exercise 1: create a repo
+
+For a number of reasons, a better workflow is to create a repository online first,
+and then fold it into your local work. So, create a repository (let's name it `sandbox`)
+on GitHub or BitBucket, depending on where you have an account.
+
