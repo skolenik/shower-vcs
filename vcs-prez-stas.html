@@ -56,9 +56,9 @@
 <li>metadata about these files, namely the record of changes</li>
 </ul>
 </section>
-<section id="stas-ongoing-example-ipfraking-repo" class="slide level2">
-<h2>Stas’ ongoing example: <code>ipfraking</code> repo</h2>
-<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking</a></p>
+<section id="ongoing-example-this-very-presentations-repo" class="slide level2">
+<h2>Ongoing example: this very presentation’s repo</h2>
+<p><a href="https://github.com/skolenik/shower-vcs" class="uri">https://github.com/skolenik/shower-vcs</a></p>
 </section>
 <section id="changeset" class="slide level2">
 <h2>Changeset</h2>
@@ -83,11 +83,11 @@
 </blockquote>
 <p>which could add 25 files to the repo – but this would still be a good changeset with a specific purpose.</p>
 </section>
-<section id="stas-ongoing-example-a-random-changeset-in-ipfraking" class="slide level2">
-<h2>Stas’ ongoing example: a random changeset in <code>ipfraking</code></h2>
-<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking/commits/e069eb8cded6d3454efab9adcb60e4c415cd7ba1" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking/commits/e069eb8cded6d3454efab9adcb60e4c415cd7ba1</a></p>
+<section id="stas-ongoing-example-a-random-changeset-in-this-repo" class="slide level2">
+<h2>Stas’ ongoing example: a random changeset in this repo</h2>
+<p><a href="https://github.com/skolenik/shower-vcs/commit/c76418c0e" class="uri">https://github.com/skolenik/shower-vcs/commit/c76418c0e</a></p>
 <p>Go back to the list of commits to see how the commit message is displayed</p>
-<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking/commits/all" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking/commits/all</a></p>
+<p><a href="https://github.com/skolenik/shower-vcs/commits/master" class="uri">https://github.com/skolenik/shower-vcs/commits/master</a></p>
 </section>
 <section id="branches" class="slide level2">
 <h2>Branches</h2>
@@ -115,9 +115,9 @@
 <p>Other times, merges require intervention of a knowledgeable human to determine how the conflicts are to be resolved. Typically, VCS clients (see below) offer meaningful options, e.g., by taking the union of the changes. But sometimes, manual editing may be required when e.g. different developers worked on the same file.</p>
 <p>TODO: insert a cute picture of a branched repo with merges.</p>
 </section>
-<section id="example-of-a-merge-in-ipfraking-repo" class="slide level2">
-<h2>Example of a merge in <code>ipfraking</code> repo</h2>
-<p><a href="https://bitbucket.org/stas_kolenikov/ipfraking/commits/6a43bf36b4b84f03a25da20ac1e477e8433df437" class="uri">https://bitbucket.org/stas_kolenikov/ipfraking/commits/6a43bf36b4b84f03a25da20ac1e477e8433df437</a></p>
+<section id="example-of-a-merge-in-this-prez-repo" class="slide level2">
+<h2>Example of a merge in this prez repo</h2>
+<p><a href="https://github.com/skolenik/shower-vcs/commit/992d5fb311e" class="uri">https://github.com/skolenik/shower-vcs/commit/992d5fb311e</a></p>
 </section>
 <section id="issue-tracking" class="slide level2">
 <h2>Issue tracking</h2>
@@ -149,6 +149,11 @@
 </blockquote>
 <p>and identify all three components: the changeset, the issue, and the file. Moreover, the issue will get closed/resolved automatically with such a commit message.</p>
 </section>
+<section id="the-first-issue-with-this-presentation" class="slide level2">
+<h2>The first issue with this presentation</h2>
+<p><a href="https://github.com/skolenik/shower-vcs/issues/1" class="uri">https://github.com/skolenik/shower-vcs/issues/1</a></p>
+<p>Check how it got closed by the commit message</p>
+</section>
 <section id="vcs-wars" class="slide level2">
 <h2>VCS wars</h2>
 <p>There are three major version control systems:</p>
@@ -165,7 +170,7 @@
 <ol type="1">
 <li>Atlassian <a href="https://www.sourcetreeapp.com/">SourceTree</a> – supports both Git and Mercurial</li>
 <li><a href="https://tortoisehg.bitbucket.io/">TortoiseHg</a> – Mercurial only</li>
-<li><a href="https://www.gitkraken.com/">GitKraken</a> – Git only</li>
+<li><a href="https://github.com/skolenik/shower-vcs/issues/1">SmartGit</a> – both Git and Mercurial, with compormises</li>
 </ol>
 <p>and many others. They obviously differ somewhat in what they can do, and which of the more complex functions are supported.</p>
 </section>
@@ -265,6 +270,16 @@ Some description</code></pre>
 <section id="exercise-8f-push-again" class="slide level2">
 <h2>Exercise 8f: push again</h2>
 <p>Now that the local repo does not have any conflicts, you can push the neatly merged set of changesets back to the server. Hit the “Push” button, and notice that your client will likely say that it is preparing and pushing several changesets. Go back to the server and validate that all of the changes have propagated.</p>
+</section>
+<section id="extra-credit" class="slide level2">
+<h2>Extra credit</h2>
+<ol type="1">
+<li>Create an issue on GitHub/BitBucket in your repo.</li>
+<li>Modify your code to address it.</li>
+<li>Commit with the message stating the the issue was fixed.</li>
+<li>Push.</li>
+<li>Study the trace of the issue, the human and computer-generated messages.</li>
+</ol>
 </section>
 <section id="thats-it-folks" class="slide level2">
 <h2>That’s it folks</h2>

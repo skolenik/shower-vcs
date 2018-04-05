@@ -44,9 +44,9 @@ A repository is a collection of:
 - files that you are working on, such as code or input data
 - metadata about these files, namely the record of changes
 
-## Stas' ongoing example: `ipfraking` repo
+## Ongoing example: this very presentation's repo
 
-https://bitbucket.org/stas_kolenikov/ipfraking
+https://github.com/skolenik/shower-vcs
 
 ## Changeset
 
@@ -77,13 +77,13 @@ or can be
 
 which could add 25 files to the repo -- but this would still be a good changeset with a specific purpose. 
 
-## Stas' ongoing example: a random changeset in `ipfraking`
+## Stas' ongoing example: a random changeset in this repo
 
-https://bitbucket.org/stas_kolenikov/ipfraking/commits/e069eb8cded6d3454efab9adcb60e4c415cd7ba1
+https://github.com/skolenik/shower-vcs/commit/c76418c0e
 
 Go back to the list of commits to see how the commit message is displayed
 
-https://bitbucket.org/stas_kolenikov/ipfraking/commits/all
+https://github.com/skolenik/shower-vcs/commits/master
 
 ## Branches 
 
@@ -127,9 +127,9 @@ when e.g. different developers worked on the same file.
 
 TODO: insert a cute picture of a branched repo with merges.
 
-## Example of a merge in `ipfraking` repo
+## Example of a merge in this prez repo
 
-https://bitbucket.org/stas_kolenikov/ipfraking/commits/6a43bf36b4b84f03a25da20ac1e477e8433df437
+https://github.com/skolenik/shower-vcs/commit/992d5fb311e
 
 ## Issue tracking
 
@@ -167,6 +167,12 @@ Most modern VCS would be able to parse the message
 and identify all three components: the changeset, the issue, and the file. Moreover,
 the issue will get closed/resolved automatically with such a commit message.
 
+## The first issue with this presentation
+
+https://github.com/skolenik/shower-vcs/issues/1
+
+Check how it got closed by the commit message
+
 ## VCS wars
 
 There are three major version control systems:
@@ -185,7 +191,7 @@ GUIs, or clients, to visualize the processes --- and they cause wars, too.
 
 1. Atlassian [SourceTree](https://www.sourcetreeapp.com/) -- supports both Git and Mercurial
 1. [TortoiseHg](https://tortoisehg.bitbucket.io/) -- Mercurial only
-1. [GitKraken](https://www.gitkraken.com/) -- Git only
+1. [SmartGit](https://github.com/skolenik/shower-vcs/issues/1) -- both Git and Mercurial, with compormises
 
 and many others. They obviously differ somewhat in what they can do, and which of the more
 complex functions are supported.
@@ -341,6 +347,14 @@ Now that the local repo does not have any conflicts, you can push the neatly mer
 set of changesets back to the server. Hit the "Push" button, and notice that your client
 will likely say that it is preparing and pushing several changesets. Go back to the server
 and validate that all of the changes have propagated.
+
+## Extra credit
+
+1. Create an issue on GitHub/BitBucket in your repo.
+2. Modify your code to address it.
+3. Commit with the message stating the the issue was fixed.
+4. Push.
+5. Study the trace of the issue, the human and computer-generated messages.
 
 ## That's it folks
 
