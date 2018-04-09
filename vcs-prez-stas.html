@@ -5,11 +5,10 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="vcs-prez-stas_files\rmdshower/node_modules/shower-ribbon/styles/screen-16x10.css">
-  <link rel="stylesheet" href="vcs-prez-stas_files/rmdshower/package/styles/screen-16x10.css">
+  <link rel="stylesheet" href="vcs-prez-stas_files/shower-ribbon/package/styles/screen-16x10.css">
   <link rel="stylesheet" href="vcs-prez-stas_files\rmdshower/style-common.css">
   <link rel="stylesheet" href="vcs-prez-stas_files\rmdshower/style-ribbon.css">
-  <link rel="stylesheet" href="vcs-prez-stas_files/rmdshower/style-override.css">
+  <link rel="stylesheet" href="vcs-prez-stas_files/shower-ribbon/style-override.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
   <script src="vcs-prez-stas_files\rmdshower/auto-render.min.js" type="text/javascript"></script>
@@ -27,7 +26,7 @@
     <p>Stas Kolenikov</p>
   </header>
 
-    
+  
   
 <section id="version-control" class="slide level2">
 <h2>Version control</h2>
@@ -103,7 +102,6 @@
 <li><em>push</em> is the action of uploading your local commits (all of them) to the centralized, master copy of the repository (typically, a repository on GitHub.com, BitBucket.org, Kiln on FogCreek, etc.)</li>
 <li><em>pull</em> is the action of downloading the commits from the master repository to your own local copy</li>
 </ul>
-<p>TODO: insert a cute picture of a branched repo.</p>
 </section>
 <section id="merge" class="slide level2">
 <h2>Merge</h2>
@@ -113,11 +111,14 @@
 <section id="merge-1" class="slide level2">
 <h2>Merge</h2>
 <p>Other times, merges require intervention of a knowledgeable human to determine how the conflicts are to be resolved. Typically, VCS clients (see below) offer meaningful options, e.g., by taking the union of the changes. But sometimes, manual editing may be required when e.g. different developers worked on the same file.</p>
-<p>TODO: insert a cute picture of a branched repo with merges.</p>
 </section>
 <section id="example-of-a-merge-in-this-prez-repo" class="slide level2">
 <h2>Example of a merge in this prez repo</h2>
 <p><a href="https://github.com/skolenik/shower-vcs/commit/992d5fb311e" class="uri">https://github.com/skolenik/shower-vcs/commit/992d5fb311e</a></p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><img src="vcs-branches.png" class="cover"></p>
 </section>
 <section id="issue-tracking" class="slide level2">
 <h2>Issue tracking</h2>
@@ -213,7 +214,6 @@
 <section id="exercise-4-find-how-the-client-identifies-changes" class="slide level2">
 <h2>Exercise 4: find how the client identifies changes</h2>
 <p>Go back to your client. (In TortoiseHg, you need to hit “Refresh” button.) Most likely, you will be shown some sort of a display of your folder, with the files that you created or copied. You will most likely see question marks (intended to indicate that your client does not yet know whether you want to add that file to the repo). Clicking on the files, you will see some content.</p>
-<p>TODO: screenshots of SourceTree, TortoiseHg, GitKraken</p>
 </section>
 <section id="exercise-5-commit-the-changes" class="slide level2">
 <h2>Exercise 5: commit the changes</h2>

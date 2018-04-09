@@ -106,8 +106,6 @@ distrbiuted VCS have two specific actions: *push* and *pull*.
 copy of the repository (typically, a repository on GitHub.com, BitBucket.org, Kiln on FogCreek, etc.)
 - *pull* is the action of downloading the commits from the master repository to your own local copy
 
-TODO: insert a cute picture of a branched repo.
-
 ## Merge
 
 As you can clearly imagine, push/pull operation can easily create conflicts.
@@ -125,11 +123,13 @@ the conflicts are to be resolved. Typically, VCS clients (see below) offer meani
 e.g., by taking the union of the changes. But sometimes, manual editing may be required
 when e.g. different developers worked on the same file.
 
-TODO: insert a cute picture of a branched repo with merges.
-
 ## Example of a merge in this prez repo
 
 https://github.com/skolenik/shower-vcs/commit/992d5fb311e
+
+## 
+
+<img src="vcs-branches.png" class="cover">
 
 ## Issue tracking
 
@@ -248,8 +248,6 @@ with the files that you created or copied. You will most likely see
 question marks (intended to indicate
 that your client does not yet know whether you want to add that file to the repo).
 Clicking on the files, you will see some content.
-
-TODO: screenshots of SourceTree, TortoiseHg, GitKraken
 
 ## Exercise 5: commit the changes
 
