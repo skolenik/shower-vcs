@@ -234,11 +234,13 @@ itching to put under version control, we will copy it down at the next step.
 
 ## Exercise 3: make local changes
 
-- Copy some existing code (do not delete your actual work though!)
+- Write a code to create a data set with one variable and one observation
 
-or 
+```
+x = 1
+```
 
-- Create some sort of "*Hello, world*" file.
+- Save the code in the format natural to your preferred package (`.R`, `.do`, `.sas`)
 
 ## Exercise 4: find how the client identifies changes
 
@@ -294,8 +296,8 @@ gets committed immediately.
 ## Exercise 8b: make local changes
 
 Go back to your local version of the repository and make local changes
-- add more files from elsewhere
-- add another line of "Hello world again!" to your basic file
+
+- create another variable in your file, `y = 2`
 
 Commit the changes -- you know how to do that
 
